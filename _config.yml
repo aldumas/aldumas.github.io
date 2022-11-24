@@ -21,7 +21,7 @@
 title: Mister Inevitable's Blog
 email: misterinevitableblog@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A place to jot down and share things that I am learning.
+  A place to jot down and share things I am learning.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
