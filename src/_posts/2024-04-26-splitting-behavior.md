@@ -37,4 +37,3 @@ published: true
 3. If there's no content in the string (i.e. no non-separator characters), the resulting array will always be empty.
    Conversely, if there is any content in the string, the resulting array will never be empty.
 4. Splitting by an empty string splits into individual characters.
-   
