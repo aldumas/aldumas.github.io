@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: minsterinevitable's toolbox
+title: misterinevitable's toolbox
 tagline: A place to share code snippets and things I learned
 email: misterinevitable|at|outlook|dot|com
 description: >-
