@@ -6,4 +6,4 @@ layout: default
 
 # Welcome
 
-Here you'll find concise blog posts with code snippets (mostly Ruby) and things I learned.
+Here you'll find concise blog posts containing code snippets and things I learned.
