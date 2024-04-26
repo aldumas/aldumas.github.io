@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "String#split behavior"
-date:   2024-04-25 14:50:51 -0700
+date:   2024-04-26 14:07:00 -0700
 categories: til
 tags: ruby corner-case String split
 published: true
