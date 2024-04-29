@@ -23,20 +23,16 @@ published: true
 ':x'.split(':') # => ['', 'x']
 '::'.split(':') # => []
 'x::y'.split(':') # => ['x', '', 'y']
-
-# Splitting by an empty string
-
-'x y'.split('') # => ['x', ' ', 'y']
-''.split('') # => []
+'::x'.split(':') # => ['', '', 'x']
 ```
 
 ## Takeaways
 
-For the following discussion, “content” is defined as characters which are not part of a separator. A “segment” is defined as the (possibly empty) string between separators or at the start or end of the string.
+For the following discussion, a "segment" is defined as the (possibly empty) string between separators or at the start
+or end of the string.
 
 1. The result is always an array.
-2. The only time an empty string will appear in the resulting array is when a segment containing content is *preceded* by a segment with no content. A
-   trailing separator will **not** produce an empty string in the result.
-3. If there's *no content* in the string, the resulting array will *always* be empty.
-   Conversely, if there is *any content* in the string, the resulting array will *never* be empty.
-4. Splitting by an empty string splits into individual characters.
+2. The only time an empty string will appear in the resulting array is when one or more empty segments are followed by a
+   non-empty segment. Some notable implications:
+   1. A trailing separator will **not** produce an empty string in the result.
+   2. If all the segments in the string are empty, the resulting array will *always* be empty.
