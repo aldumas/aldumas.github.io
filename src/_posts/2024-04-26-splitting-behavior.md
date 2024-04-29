@@ -22,7 +22,7 @@ published: true
 'x:'.split(':') # => ['x']
 ':x'.split(':') # => ['', 'x']
 '::'.split(':') # => []
-‘x::y’.split(‘:’) # => [‘x’, ‘’, ‘y’]
+'x::y'.split(':') # => ['x', '', 'y']
 
 # Splitting by an empty string
 
