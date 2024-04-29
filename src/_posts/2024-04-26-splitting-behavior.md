@@ -1,9 +1,14 @@
 ---
 layout: post
-title:  "String#split behavior"
+title:  String#split behavior
 date:   2024-04-26 14:07:00 -0700
-categories: til
-tags: ruby corner-case String split
+category: til
+tags: 
+   - ruby
+   - corner-case
+   - String
+   - split
+excerpt: "Learn what to expect of the output in corner cases."
 published: true
 ---
 
@@ -35,7 +40,7 @@ or end of the string.
 1. The result is always an array.
 2. The only time an empty string will appear in the resulting array is when one or more empty segments are followed by a
    non-empty segment. Some notable implications:
-   <ol type="a">
+   <ol class="list-alpha">
       <li>A trailing separator will <strong>not</strong> produce an empty string in the result.</li>
       <li>If all the segments in the string are empty, the resulting array will <em>always</em> be empty.</li>
    </ol>
