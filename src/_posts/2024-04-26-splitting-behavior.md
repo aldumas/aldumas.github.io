@@ -16,15 +16,15 @@ published: true
 ## Corner cases
 
 ```ruby
-''.split(':') # => []
-':'.split(':') # => []
-'x'.split(':') # => ['x']
-'x:'.split(':') # => ['x']
-':x'.split(':') # => ['', 'x']
-'::'.split(':') # => []
+''.split(':')     # => []
+':'.split(':')    # => []
+'x'.split(':')    # => ['x']
+'x:'.split(':')   # => ['x']
+':x'.split(':')   # => ['', 'x']
+'::'.split(':')   # => []
 'x::y'.split(':') # => ['x', '', 'y']
-'::x'.split(':') # => ['', '', 'x']
-'x::'.split(':') # => ['x']
+'::x'.split(':')  # => ['', '', 'x']
+'x::'.split(':')  # => ['x']
 ```
 
 ## Takeaways
