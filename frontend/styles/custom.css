@@ -1,0 +1,15 @@
+.post_items {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.post_items li:not(:last-child) {
+    border-bottom: 1px solid olive;
+    border-width: 2px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.list-alpha {
+    list-style-type: lower-alpha;
+}
