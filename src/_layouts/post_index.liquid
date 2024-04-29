@@ -9,11 +9,6 @@ layout: page
             <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
             <br /><small>{{ post.data.excerpt }}</small>
         </li>
-        <li>
-            {{ post.data.date | date: "%Y-%m-%d" }}
-            <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
-            <br /><small>{{ post.data.excerpt }}</small>
-        </li>
     {% endfor %}
 </ul>
 
