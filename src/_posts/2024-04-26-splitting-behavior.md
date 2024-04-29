@@ -24,6 +24,7 @@ published: true
 '::'.split(':') # => []
 'x::y'.split(':') # => ['x', '', 'y']
 '::x'.split(':') # => ['', '', 'x']
+'x::'.split(':') # => ['x']
 ```
 
 ## Takeaways
