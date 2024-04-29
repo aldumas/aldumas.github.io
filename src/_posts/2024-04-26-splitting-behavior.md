@@ -8,7 +8,7 @@ tags:
    - corner-case
    - String
    - split
-excerpt: "Learn what to expect of the output in corner cases."
+excerpt: "When to expect empty arrays and empty strings in the output."
 published: true
 ---
 
