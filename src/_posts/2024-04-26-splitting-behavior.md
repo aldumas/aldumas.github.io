@@ -34,5 +34,7 @@ or end of the string.
 1. The result is always an array.
 2. The only time an empty string will appear in the resulting array is when one or more empty segments are followed by a
    non-empty segment. Some notable implications:
-   1. A trailing separator will **not** produce an empty string in the result.
-   2. If all the segments in the string are empty, the resulting array will *always* be empty.
+   <ol type="a">
+      <li>A trailing separator will <strong>not</strong> produce an empty string in the result.</li>
+      <li>If all the segments in the string are empty, the resulting array will <em>always</em> be empty.</li>
+   </ol>
