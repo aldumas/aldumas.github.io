@@ -17,3 +17,11 @@
 .post_items .date {
     font-weight: lighter;
 }
+
+.post_items .date::after {
+    content: "\00a0\00a0\00a0";
+}
+
+.post_items .context::after {
+    content: "\00a0";
+}
