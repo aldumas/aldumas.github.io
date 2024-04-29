@@ -5,7 +5,7 @@ layout: page
 <ul class="post_items">
     {% for post in paginator.resources %}
         <li>
-            <span class="date">{{ post.data.date | date: "%Y-%m-%d" }}</span>&nbsp;&nbsp;&nbsp;<a href="{{ post.relative_url }}">{{ post.data.title }}</a>
+            <span class="date">{{ post.data.date | date: "%Y-%m-%d" }}</span>&nbsp;&nbsp;&nbsp;{% if post.data.context %}[{{ post.data.context }}]&nbsp;{% endif %}<a href="{{ post.relative_url }}">{{ post.data.title }}</a>
             <br /><small>{{ post.data.excerpt }}</small>
         </li>
     {% endfor %}

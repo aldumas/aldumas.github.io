@@ -8,6 +8,7 @@ tags:
    - corner-case
    - String
    - split
+context: ruby
 excerpt: "When to expect empty arrays and empty strings in the output."
 published: true
 ---
