@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Structs
+title: Structs and OpenStructs
 date: 2024-05-01 12:48:40 -0700
 category: til
 tags: 
