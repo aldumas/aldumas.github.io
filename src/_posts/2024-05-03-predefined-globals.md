@@ -46,6 +46,6 @@ puts value_or_error.class.name # => KeyError
 This allows you to succinctly capture the exception for logging or processing
 some other way without cluttering up your method with `begin` and `rescue`
 blocks. See [this <span class="small-caps">graceful.dev</span> video](https://graceful.dev/courses/the-freebies/modules/ruby-language/topic/episode-022-inline-rescue/)
-for more information.
+for more information on using inline-rescue.
 
 See also [the list of predefined globals](https://ruby-doc.org/current/globals_rdoc.html).
