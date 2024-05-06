@@ -36,7 +36,7 @@ end
 ```
 
 The one use case I am aware of for `$!` is converting an exception to a value
-using inline-rescue.
+using [inline-rescue]({% post_url 2024-05-06-inline-rescue %}).
 
 ```ruby
 value_or_error = {}.fetch(:name) rescue $!
