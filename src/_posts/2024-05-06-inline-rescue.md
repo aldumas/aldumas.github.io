@@ -14,7 +14,7 @@ published: true
 
 In Ruby, `rescue` can appear in multiple places:
 
-1. `begin/rescue` blocks:
+- `begin/rescue` blocks:
 
 ```ruby
 begin
@@ -24,7 +24,7 @@ rescue
 end
 ```
 
-2. `def/rescue`
+- `def/rescue`
 
 ```ruby
 def perform_work
@@ -34,7 +34,7 @@ rescue
 end
 ```
 
-3. block `rescues`
+- block `rescue`
 
 ```ruby
 3.times do |attempt|
@@ -46,7 +46,7 @@ end
 
 I recently learned about a fourth place `rescue` may be used:
 
-4. inline `rescue`
+- inline `rescue`
 
 ```ruby
 risky_method rescue "a value"
