@@ -8,7 +8,7 @@ tags:
    - scope
    - model
    - merge
-context: ruby
+context: rails
 excerpt: "Use `#joins` and `#merge` together to avoid duplicating the logic of the related model's scope."
 published: true
 ---
