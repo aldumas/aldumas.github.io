@@ -9,7 +9,7 @@ tags:
    - cascade
 context: css
 excerpt: "`!important` styles are considered to be from a higher-priority origin than author styles"
-published: false
+published: true
 ---
 
 Consider this code:
