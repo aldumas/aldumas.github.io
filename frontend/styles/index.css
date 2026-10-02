@@ -1,0 +1,117 @@
+:root {
+  --body-background: #faf8f5;
+  --body-color: #2f2b28;
+  --muted-color: #6b645d;
+  --heading-color: #1d1a17;
+  --action-color: #8a4b2a;
+  --rule-color: #e4ddd4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: #1b1917;
+    --body-color: #ddd6cd;
+    --muted-color: #a39a90;
+    --heading-color: #f3ede6;
+    --action-color: #e0a07a;
+    --rule-color: #3a3530;
+  }
+}
+
+body {
+  background: var(--body-background);
+  color: var(--body-color);
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  margin: 0 16px;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--action-color);
+  text-underline-offset: 0.15em;
+}
+
+h1, h2, h3 {
+  color: var(--heading-color);
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 1rem 0 0.5rem;
+  font-size: 2.2rem;
+}
+
+body > header,
+body > nav,
+main,
+footer {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > header {
+  padding-top: 2.5rem;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-decoration: none;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted-color);
+  font-style: italic;
+}
+
+body > nav ul {
+  margin: 1rem 0 0;
+  padding: 0 0 1rem;
+  list-style-type: none;
+  display: flex;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--rule-color);
+}
+
+body > nav a {
+  text-decoration: none;
+}
+
+main {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  min-height: calc(100vh - 320px);
+}
+
+.post-date,
+small {
+  color: var(--muted-color);
+}
+
+li small {
+  margin-left: 0.5rem;
+}
+
+footer {
+  padding: 1rem 0 4rem;
+  border-top: 1px solid var(--rule-color);
+  color: var(--muted-color);
+  font-size: 0.95rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule-color);
+  margin: 3rem 0;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--rule-color);
+  color: var(--muted-color);
+}

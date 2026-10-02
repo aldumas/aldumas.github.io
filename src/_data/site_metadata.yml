@@ -1,0 +1,10 @@
+# Site-wide metadata, available in templates as site.metadata.*
+# Title and tagline are working choices — change freely.
+
+title: Mister Inevitable
+tagline: One family's life with Phelan-McDermid Syndrome
+description: >-
+  Personal writing by Adam Dumas, a dad whose daughter has Phelan-McDermid
+  Syndrome — about the ordinary days, the paperwork, the people around her,
+  and getting ready for the years after us.
+author: Adam Dumas
