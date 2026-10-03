@@ -115,3 +115,31 @@ blockquote {
   border-left: 3px solid var(--rule-color);
   color: var(--muted-color);
 }
+
+/* Pull quotes: see plugins/builders/pull_quotes.rb */
+.pullquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 0;
+  border-top: 2px solid var(--action-color);
+  border-bottom: 2px solid var(--action-color);
+  color: var(--heading-color);
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.3;
+  text-align: center;
+}
+
+@media (min-width: 52rem) {
+  .pullquote {
+    float: right;
+    width: 45%;
+    margin: 0.4rem -4rem 1rem 1.5rem;
+    text-align: left;
+  }
+}
+
+article::after {
+  content: "";
+  display: table;
+  clear: both;
+}

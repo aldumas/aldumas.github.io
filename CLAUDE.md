@@ -74,6 +74,20 @@ only `ideas/`, `rules-ledger.md` or `CLAUDE.md` don't deploy.
 (`git log origin/main..main`), and wait. Permission for one push
 doesn't carry over to the next.
 
+`bin/bridgetown build` doesn't rebuild the CSS/JS bundle. After changing
+`frontend/`, use `start` or `deploy`.
+
+## Post features
+
+- **Pull quotes:** wrap a phrase in a post with
+  `<span class="pull">…</span>`. It stays in the prose as normal text and is
+  also shown in large type just before its paragraph (floated right on wide
+  screens). Markdown inside the span works. The builder is
+  `plugins/builders/pull_quotes.rb`, the styles are at the end of
+  `frontend/styles/index.css`, and the RSS feed carries only the prose.
+- Posts in `src/_posts/` use the `post` layout by default
+  (`src/_posts/_defaults.yml`).
+
 ## Working with the microsaas workspace
 
 - `../microsaas` is a **read-only source** from this repo. Cite its docs by

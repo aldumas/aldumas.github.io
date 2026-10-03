@@ -15,6 +15,20 @@ GitHub**, so everything in this folder can be read by anyone. Follow
   `slug.md`, with the same front matter a post uses (`title:`) plus a
   `status:` line (`idea`, `drafting`, `ready`).
 
+## Pull quotes
+
+To repeat a line in large type as an attention grabber, wrap it in the
+draft:
+
+```markdown
+That was when I noticed <span class="pull">the sentence never had anyone
+else in it</span>, and I started listening for it.
+```
+
+The line stays in the paragraph as normal text, and a large copy appears
+just before that paragraph. One or two per post at most, or they stop
+standing out.
+
 ## From idea to post
 
 1. Pick an idea from `parent-articles.md` and check its gate column.

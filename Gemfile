@@ -45,3 +45,5 @@ gem "falcon"
 
 gem "bridgetown-feed", "~> 4.0"
 gem "bridgetown-seo-tag", "~> 7.0"
+
+gem "nokogiri", "~> 1.19"
