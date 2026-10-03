@@ -143,3 +143,36 @@ article::after {
   display: table;
   clear: both;
 }
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95em;
+}
+
+th,
+td {
+  padding: 0.35rem 0.75rem;
+  border-bottom: 1px solid var(--rule-color);
+  text-align: left;
+}
+
+th {
+  border-bottom-width: 2px;
+}
+
+/* Wide content scrolls inside itself instead of widening the page */
+pre,
+table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  display: block;
+}
+
+:not(pre) > code {
+  overflow-wrap: anywhere;
+}

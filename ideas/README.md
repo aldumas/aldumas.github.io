@@ -29,6 +29,10 @@ The line stays in the paragraph as normal text, and a large copy appears
 just before that paragraph. One or two per post at most, or they stop
 standing out.
 
+For every other effect (footnotes, highlights, tables, collapsible
+sections…), see the demo post `../src/_posts/2026-10-02-formatting-demo.md`.
+It never publishes. View it with `bin/bridgetown start --unpublished`.
+
 ## From idea to post
 
 1. Pick an idea from `parent-articles.md` and check its gate column.

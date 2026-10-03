@@ -85,6 +85,10 @@ doesn't carry over to the next.
   screens). Markdown inside the span works. The builder is
   `plugins/builders/pull_quotes.rb`, the styles are at the end of
   `frontend/styles/index.css`, and the RSS feed carries only the prose.
+- **Every other effect** (footnotes, highlights, tables, collapsible
+  sections, ERB, etc.) is shown with its source in the unpublished demo post
+  `src/_posts/2026-10-02-formatting-demo.md`. View it with
+  `bin/bridgetown start --unpublished`.
 - Posts in `src/_posts/` use the `post` layout by default
   (`src/_posts/_defaults.yml`).
 
