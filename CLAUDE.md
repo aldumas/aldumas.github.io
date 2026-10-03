@@ -64,7 +64,10 @@ bin/bridgetown start                              # dev server, http://localhost
 BRIDGETOWN_ENV=production bin/bridgetown deploy   # production build into output/
 ```
 
-Pushing `main` deploys: the workflow builds and publishes.
+Pushing `main` deploys when the push touches a file the site is built from
+(`src/`, `frontend/`, `config/`, the Gemfile/package files; the full list is
+the `paths:` filter in `.github/workflows/deploy.yml`). Pushes that touch
+only `ideas/`, `rules-ledger.md` or `CLAUDE.md` don't deploy.
 
 **Never push without Adam's explicit permission, every time**
 (`rules-ledger.md` §6). Commit locally, tell him what's waiting

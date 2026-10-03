@@ -4,6 +4,23 @@ on:
   push:
     branches:
       - main
+    # Deploy only when something the site is built from changes. Edits to
+    # ideas/, rules-ledger.md, CLAUDE.md, etc. never deploy.
+    paths:
+      - "src/**"
+      - "frontend/**"
+      - "config/**"
+      - "plugins/**"
+      - "bin/**"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
+      - "esbuild.config.js"
+      - "postcss.config.js"
+      - "Rakefile"
+      - ".ruby-version"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
 permissions:
