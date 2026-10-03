@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git push)",
+      "Bash(git -C * push:*)",
+      "Bash(gh workflow run:*)"
+    ]
+  }
+}
