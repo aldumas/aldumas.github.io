@@ -281,6 +281,11 @@ or link to it, but they are different things with different rules.
 - **Nothing auto-publishes.** A post goes live only when I move it into
   `src/_posts/` and push. ← microsaas ledger §5 *the parent's hand on everything
   generated* `[process]`
+- **Nothing is pushed without my permission** _(Adam, 2026-10-02)_. Every
+  push to `main` deploys the site, so a push is a publication. Commits
+  stay local until I've reviewed what they contain and said to push.
+  Permission covers one push, not the rest of a session.
+  This applies to every branch and to force pushes. `[process]`
 - **Every idea names its source.** When an idea comes from a microsaas
   doc, the idea file cites the path, so the argument doesn't have to be
   rebuilt. `[process]`

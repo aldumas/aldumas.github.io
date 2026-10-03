@@ -26,6 +26,8 @@ her. The rules that trip most often:
   onlookers.
 - Peer experience, never advice (`rules-ledger.md` §4).
 - Nothing offers or pitches the product (`rules-ledger.md` §5).
+- **Never `git push` without Adam's permission.** A push deploys the site
+  (`rules-ledger.md` §6).
 - Any text Claude drafts in Adam's voice starts with a notice that it's
   Claude-generated and not yet his (`rules-ledger.md` §6).
 
@@ -62,7 +64,12 @@ bin/bridgetown start                              # dev server, http://localhost
 BRIDGETOWN_ENV=production bin/bridgetown deploy   # production build into output/
 ```
 
-Deploying is just pushing `main`. The workflow builds and publishes.
+Pushing `main` deploys: the workflow builds and publishes.
+
+**Never push without Adam's explicit permission, every time**
+(`rules-ledger.md` §6). Commit locally, tell him what's waiting
+(`git log origin/main..main`), and wait. Permission for one push
+doesn't carry over to the next.
 
 ## Working with the microsaas workspace
 
