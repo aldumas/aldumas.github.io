@@ -1,0 +1,22 @@
+# misterinevitable.com
+
+The business website of Adam Dumas (Minecraft mods), published at
+**https://misterinevitable.com** through GitHub Pages from this repo
+(`aldumas/aldumas.github.io`). It's plain static HTML in `site/` with no
+build step; `README.md` has the preview command.
+
+The personal blog, its rulebook (`rules-ledger.md`), the article ideas
+(`ideas/`) and the blog's own `CLAUDE.md` were removed from `main` when this
+site replaced it. They're kept on the `archive/blog-and-notes` branch.
+
+## Rules
+
+- **Never `git push` without Adam's explicit permission, every time.**
+  Permission for one push doesn't carry over to the next. Commit locally,
+  tell him what's waiting (`git log origin/main..main`), and wait. A push to
+  `main` that touches `site/**` or the workflow deploys the site
+  (`.github/workflows/deploy.yml`). `.claude/settings.json` makes Claude Code
+  ask before any push or manual workflow run.
+- **The repo is public.** Nothing private goes in any file.
+- Any text Claude drafts in Adam's voice starts with a notice that it's
+  Claude-generated and not yet his.
