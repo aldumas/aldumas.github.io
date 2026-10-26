@@ -20,3 +20,11 @@ site replaced it. They're kept on the `archive/blog-and-notes` branch.
 - **The repo is public.** Nothing private goes in any file.
 - Any text Claude drafts in Adam's voice starts with a notice that it's
   Claude-generated and not yet his.
+
+## Fizzy
+
+Adam's ideas for work that isn't about one mod with its own board (this
+site, work across mods, mods without a repo yet) are cards on the
+**Workshop** Fizzy board. Read `docs/agents/fizzy-api.md` before any Fizzy
+call: it names the board, and the only two changes agents may make there.
+Write "card #N" for a Fizzy card, since its numbers overlap GitHub's.
