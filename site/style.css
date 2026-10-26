@@ -180,3 +180,15 @@ iframe.kofi {
 	padding: 4px;
 	margin: 16px 0 8px;
 }
+
+/* Adam's pixel-art character, scaled up in whole pixels so it stays sharp */
+.avatar {
+	float: right;
+	width: 210px;
+	height: auto;
+	image-rendering: pixelated;
+	margin: 4px 0 12px 24px;
+}
+@media (max-width: 520px) {
+	.avatar { float: none; display: block; width: 168px; margin: 0 auto 16px; }
+}
