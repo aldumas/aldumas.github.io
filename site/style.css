@@ -149,3 +149,14 @@ dl.facts dd { margin: 0; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-bottom: 12px; }
 .site-footer nav a { color: var(--muted); }
 .site-footer p { margin: 4px 0; }
+
+/* Ko-fi's embedded tip form; its own background is light in both themes */
+iframe.kofi {
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 8px;
+	background: #f9f9f9;
+	padding: 4px;
+	margin: 16px 0 8px;
+}
