@@ -5,9 +5,11 @@ The business website of Adam Dumas (Minecraft mods), published at
 (`aldumas/aldumas.github.io`). It's plain static HTML in `site/` with no
 build step; `README.md` has the preview command.
 
-The personal blog, its rulebook (`rules-ledger.md`), the article ideas
-(`ideas/`) and the blog's own `CLAUDE.md` were removed from `main` when this
-site replaced it. They're kept on the `archive/blog-and-notes` branch.
+The personal blog that used to live here, with its rulebook
+(`rules-ledger.md`), article ideas and own `CLAUDE.md`, is in the private
+repo `aldumas/blog-archive`. This repo's history was rewritten on
+2026-10-26 to start with the site, so none of it is here any more. Keep
+it that way: nothing from the blog comes back into this public repo.
 
 ## Rules
 
