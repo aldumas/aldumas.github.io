@@ -1,28 +1,42 @@
-:root {
-	--bg: #f6f7f5;
-	--surface: #ffffff;
-	--text: #1b2226;
-	--muted: #56636a;
-	--accent: #0b6e6e;
-	--accent-strong: #08514f;
-	--border: #dde3e1;
-	--hero-bg: #0d1b22;
-	--hero-text: #e6f2f0;
-	--hero-muted: #9fb7b4;
-	--glow: #29dfcb;
+/* Fonts are served from site/fonts (SIL Open Font License, see the LICENSE files there). */
+@font-face {
+	font-family: "Tiny5";
+	src: url("fonts/tiny5.woff2") format("woff2");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Inter";
+	src: url("fonts/inter-400.woff2") format("woff2");
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Inter";
+	src: url("fonts/inter-600.woff2") format("woff2");
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Inter";
+	src: url("fonts/inter-700.woff2") format("woff2");
+	font-weight: 700;
+	font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: #0b1418;
-		--surface: #111e24;
-		--text: #e3ecea;
-		--muted: #9aaeac;
-		--accent: #3fd1c1;
-		--accent-strong: #7ee8dc;
-		--border: #22343b;
-		--hero-bg: #060d10;
-	}
+/* One dark theme: the night the mods take place in. */
+:root {
+	color-scheme: dark;
+	--night: #070b1f;
+	--bg: #11141b;
+	--panel: #1b1f29;
+	--panel-light: #2c3240;
+	--panel-dark: #0a0c11;
+	--text: #e6e9ef;
+	--muted: #9aa3b5;
+	--accent: #3fe0cf;
+	--accent-strong: #8ff3e8;
+	--shadow: #2f3340;
+	--pixel: "Tiny5", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
 }
 
 * { box-sizing: border-box; }
@@ -33,102 +47,108 @@ body {
 	margin: 0;
 	background: var(--bg);
 	color: var(--text);
-	font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	font: 17px/1.65 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-a { color: var(--accent); }
+a { color: var(--accent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-strong); }
 
 .wrap {
-	max-width: 760px;
+	max-width: 780px;
 	margin: 0 auto;
 	padding: 0 16px;
 }
 
-/* Header */
-.site-header {
-	border-bottom: 1px solid var(--border);
-	background: var(--surface);
+/* Pixel type: Minecraft's text casts a hard shadow one pixel down and right. */
+h1, h2, h3, .brand, .site-header nav, .eyebrow, .tag, .site-footer nav {
+	font-family: var(--pixel);
+	font-weight: 400;
+	letter-spacing: 0.02em;
 }
+h1, h2, h3 {
+	line-height: 1.15;
+	text-shadow: 3px 3px 0 var(--shadow);
+}
+
+/* A row of grass blocks along an edge */
+.grass-edge {
+	height: 12px;
+	background: url("img/grass.png") repeat-x;
+	background-size: 32px 12px;
+	image-rendering: pixelated;
+}
+
+/* Header */
+.site-header { background: var(--night); }
 .site-header .wrap {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	gap: 8px 24px;
+	gap: 6px 24px;
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
 .brand {
-	font-weight: 700;
+	font-size: 24px;
 	color: var(--text);
 	text-decoration: none;
-	letter-spacing: 0.01em;
+	text-shadow: 2px 2px 0 var(--shadow);
 }
-.brand span { color: var(--muted); font-weight: 400; }
-.site-header nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
+.brand span { color: var(--accent); }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 16px; }
 .site-header nav a { color: var(--muted); text-decoration: none; }
-.site-header nav a:hover, .site-header nav a[aria-current] { color: var(--text); }
+.site-header nav a:hover { color: var(--text); }
+.site-header nav a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-thickness: 2px; }
 
-/* Hero */
+/* Hero: the pixel-art night, with the ground along the bottom */
 .hero {
-	background: radial-gradient(ellipse at 50% 120%, #0f3a3d 0%, var(--hero-bg) 65%);
-	color: var(--hero-text);
-	padding: 72px 0 64px;
+	background: var(--night) url("img/night.png") no-repeat center bottom;
+	background-size: max(100%, 960px) auto;
+	image-rendering: pixelated;
+	padding: 56px 0 calc(max(100vw, 960px) * 0.2);
 }
 .hero h1 {
-	font-size: clamp(30px, 6vw, 46px);
-	line-height: 1.15;
+	font-size: clamp(32px, 7vw, 56px);
 	margin: 0 0 16px;
+	color: #fff;
+	text-shadow: 4px 4px 0 #1f2340;
 }
-.hero p { color: var(--hero-muted); font-size: 19px; margin: 0; max-width: 34em; }
+.hero p { color: #c3cbe0; font-size: 19px; margin: 0; max-width: 32em; text-shadow: 2px 2px 0 var(--night), -1px -1px 0 var(--night); }
 .hero .eyebrow {
-	text-transform: uppercase;
-	letter-spacing: 0.12em;
-	font-size: 13px;
-	color: var(--glow);
+	font-size: 16px;
+	color: var(--accent);
 	margin-bottom: 12px;
+	text-shadow: 2px 2px 0 #0b3a42;
 }
 
-main { padding: 48px 0 64px; }
-main h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
-main h2 { font-size: 22px; margin: 40px 0 8px; }
-main h3 { font-size: 18px; margin: 24px 0 4px; }
+main { padding: 44px 0 64px; }
+main h1 { font-size: 40px; margin: 0 0 12px; }
+main h2 { font-size: 28px; margin: 44px 0 10px; }
+main h3 { font-size: 24px; margin: 24px 0 6px; }
 .updated { color: var(--muted); font-size: 14px; margin-top: 0; }
 
+ul { padding-left: 1.3em; }
+li { margin: 4px 0; }
+li::marker { color: var(--accent); content: "■  "; font-size: 0.7em; }
+
+/* Panels: a black outline with a light top-left bevel and a dark bottom-right one, like the game's menus */
 .card {
-	background: var(--surface);
-	border: 1px solid var(--border);
-	border-radius: 10px;
+	background: var(--panel);
+	border: 3px solid #000;
+	box-shadow: inset 3px 3px 0 var(--panel-light), inset -3px -3px 0 var(--panel-dark);
 	padding: 24px;
-	margin: 24px 0;
+	margin: 28px 0;
 }
 .card h2, .card h3 { margin-top: 0; }
 .tag {
 	display: inline-block;
-	font-size: 12px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	color: var(--accent);
-	border: 1px solid var(--accent);
-	border-radius: 999px;
-	padding: 1px 10px;
-	margin-bottom: 10px;
-}
-
-.button {
-	display: inline-block;
+	font-size: 16px;
+	color: #0a1f22;
 	background: var(--accent);
-	color: #fff;
-	text-decoration: none;
-	font-weight: 600;
-	padding: 10px 20px;
-	border-radius: 8px;
-}
-.button:hover { background: var(--accent-strong); color: #fff; }
-@media (prefers-color-scheme: dark) {
-	.button, .button:hover { color: #06201f; }
+	box-shadow: inset -2px -2px 0 #1a9d90, inset 2px 2px 0 #b8fff6;
+	padding: 3px 10px 2px;
+	margin-bottom: 14px;
 }
 
 dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 0; }
@@ -139,23 +159,23 @@ dl.facts dd { margin: 0; }
 	dl.facts dd { margin-bottom: 10px; }
 }
 
-/* Footer */
+/* Footer: deepslate under the grass */
 .site-footer {
-	border-top: 1px solid var(--border);
+	background: #191a20;
 	color: var(--muted);
 	font-size: 14px;
-	padding: 28px 0 40px;
 }
-.site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-bottom: 12px; }
-.site-footer nav a { color: var(--muted); }
+.site-footer .wrap { padding-top: 28px; padding-bottom: 40px; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 14px; font-size: 16px; }
+.site-footer nav a { color: var(--text); text-decoration: none; }
+.site-footer nav a:hover { color: var(--accent); }
 .site-footer p { margin: 4px 0; }
 
-/* Ko-fi's embedded tip form; its own background is light in both themes */
+/* Ko-fi's embedded tip form; it has its own light background */
 iframe.kofi {
 	display: block;
 	width: 100%;
-	border: none;
-	border-radius: 8px;
+	border: 3px solid #000;
 	background: #f9f9f9;
 	padding: 4px;
 	margin: 16px 0 8px;
