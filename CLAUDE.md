@@ -20,6 +20,10 @@ it that way: nothing from the blog comes back into this public repo.
   (`.github/workflows/deploy.yml`). `.claude/settings.json` makes Claude Code
   ask before any push or manual workflow run.
 - **The repo is public.** Nothing private goes in any file.
+- **Accessibility: every change to `site/**` meets WCAG 2.2 AA**, checked
+  as `docs/accessibility.md` says. Read it before changing the site. A
+  departure needs Adam's explicit permission for that one departure, and
+  its reason goes in that file's Exceptions table.
 - Any text Claude drafts in Adam's voice starts with a notice that it's
   Claude-generated and not yet his.
 
