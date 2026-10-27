@@ -134,6 +134,9 @@ Report each step's result when presenting the change.
   `:focus-visible` outline: at least 2 px, at least 3:1 against the background, and never
   `outline: none` without a replacement. A focused element is never fully
   hidden by other content [2.4.11].
+- An embedded `<iframe>` has a `title` naming what it holds [4.1.2]. Inside
+  it, focus styles belong to the provider: keyboard focus moves into the
+  embedded page (the Ko-fi form), where the site's CSS can't reach.
 - Targets are at least 24 × 24 CSS px, or spaced so a 24 px circle on each
   doesn't overlap another [2.5.8]. Links inside a sentence are exempt.
 - Hover and focus behave the same. Anything shown on hover is also shown

@@ -53,6 +53,22 @@ body {
 a { color: var(--accent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-strong); }
 
+/* Keyboard focus: the accent clears 3:1 against every background on the site */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* Off-screen until a keyboard user tabs to it, then over the header */
+.skip {
+	position: absolute;
+	left: 16px;
+	top: -100px;
+	z-index: 1;
+	padding: 6px 12px;
+	background: var(--accent);
+	color: #0a1f22;
+	font-weight: 600;
+}
+.skip:focus { top: 8px; }
+
 .wrap {
 	max-width: 780px;
 	margin: 0 auto;
