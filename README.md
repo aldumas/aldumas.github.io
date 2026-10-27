@@ -27,3 +27,10 @@ to preview; don't link to it from anywhere.
 
 **Locally.** Check out the branch, run
 `python3 -m http.server -d site 8000`, then open http://localhost:8000.
+
+## Ko-fi images
+
+`kofi/` holds the Ko-fi page's images, which aren't part of the site:
+`profile-800.png` (the profile picture) and `cover-1200x400.png` (the cover,
+Ko-fi's 3:1). `tools/kofi-profile.py` and `tools/kofi-cover.py` redraw them
+(`python3 tools/kofi-profile.py kofi`; they need Pillow).
